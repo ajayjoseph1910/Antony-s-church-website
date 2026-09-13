@@ -90,7 +90,13 @@ nav a:hover {
 
     z-index: -1;
 }
-
+@media (max-width: 800px) {
+    .hero::before {
+        background-image: url("hero.jpg");
+        background-size: cover;
+        background-position: 70% center;
+    }
+}
 /* Your text/buttons */
 .hero-content {
     position: relative;
