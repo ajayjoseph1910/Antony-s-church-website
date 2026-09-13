@@ -1,0 +1,461 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f3e9;
+    color: #10232c;
+}
+
+
+/* NAVBAR */
+
+header {
+    height: 75px;
+    background: #061923;
+    color: #e5b84b;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo:first-letter {
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #f5eee0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e5b84b;
+}
+
+
+/* HERO */
+
+.hero {
+    position: relative;
+    min-height: 60vh;
+    overflow: hidden;
+}
+
+/* Fixed image */
+.hero::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url("hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -2;
+}
+
+/* Dark overlay */
+.hero::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: -1;
+}
+
+/* Your text/buttons */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+.small-title {
+    color: #c99b32;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 58px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    color: #e5b84b;
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+
+/* BUTTONS */
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.gold {
+    background: #d6aa3c;
+    color: #071921;
+}
+
+.outline {
+    border: 1px solid #d6aa3c;
+    color: white;
+}
+
+
+/* QUICK INFO */
+
+.quick-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background: #f7f3e9;
+
+    padding: 40px 8%;
+}
+
+.quick-info div {
+    text-align: center;
+    padding: 20px;
+
+    border-right: 1px solid #d8ccb3;
+}
+
+.quick-info div:last-child {
+    border: none;
+}
+
+.quick-info span {
+    font-size: 30px;
+    color: #b88620;
+}
+
+.quick-info h3 {
+    margin: 10px 0;
+    font-family: Georgia, serif;
+}
+
+
+/* ABOUT */
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+
+    padding: 90px 8%;
+
+    background: white;
+}
+
+.church-image {
+    width: 50%;
+}
+
+.church-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+.about-text h2,
+.mass h2,
+.events h2,
+.ministries h2,
+.gallery h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+
+/* MASS */
+
+.mass {
+    background: #071d28;
+    color: white;
+
+    padding: 70px 8%;
+
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.mass > div:first-child {
+    flex: 1;
+}
+
+.timing-card {
+    background: #102d3b;
+    border: 1px solid #705a27;
+
+    padding: 30px;
+    width: 220px;
+
+    border-radius: 8px;
+}
+
+.timing-card h3 {
+    color: #e5b84b;
+    margin-bottom: 15px;
+}
+
+.timing-card p {
+    margin: 7px 0;
+}
+
+
+/* EVENTS */
+
+.events {
+    padding: 80px 8%;
+}
+
+.event-container {
+    display: flex;
+    gap: 25px;
+}
+
+.event-card {
+    background: white;
+    padding: 30px;
+    flex: 1;
+
+    border-left: 4px solid #d0a438;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.date {
+    color: #a77b1b;
+    margin-bottom: 20px;
+}
+
+.date strong {
+    display: block;
+    font-size: 35px;
+}
+
+
+/* MINISTRIES */
+
+.ministries {
+    padding: 70px 8%;
+    background: white;
+}
+
+.ministry-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.ministry-container div {
+    padding: 30px 10px;
+    text-align: center;
+
+    border: 1px solid #ddd3bd;
+    border-radius: 6px;
+
+    line-height: 2;
+}
+
+
+/* VERSE */
+
+.verse {
+    background: #071d28;
+    color: white;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.verse p {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.verse span {
+    display: block;
+    margin-top: 20px;
+    color: #e5b84b;
+}
+
+
+/* GALLERY */
+
+.gallery {
+    padding: 80px 8%;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #061923;
+    color: white;
+
+    padding: 60px 8%;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+footer h2,
+footer h3 {
+    color: #e5b84b;
+    margin-bottom: 15px;
+}
+
+footer a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 8px 0;
+}
+
+.copyright {
+    background: #041219;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 70px 25px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .quick-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 60px 25px;
+    }
+
+    .church-image {
+        width: 100%;
+    }
+
+    .mass {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .timing-card {
+        width: 100%;
+    }
+
+    .event-container {
+        flex-direction: column;
+    }
+
+    .ministry-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+}
