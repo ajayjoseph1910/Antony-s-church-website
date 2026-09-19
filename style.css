@@ -72,8 +72,8 @@ nav a:hover {
     position: fixed;
     inset: 0;
 
-    background-image: url("hero.jpg");
-    background-size: cover;
+    background-image: url("hero1.png");
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -86,15 +86,15 @@ nav a:hover {
     position: fixed;
     inset: 0;
 
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.548);
 
     z-index: -1;
 }
 @media (max-width: 800px) {
     .hero::before {
-        background-image: url("hero.jpg");
+        background-image: url("hero1.png");
         background-size: cover;
-        background-position: 70% center;
+        background-position: 80% center;
     }
 }
 /* Your text/buttons */
@@ -114,6 +114,7 @@ nav a:hover {
     font-family: Georgia, serif;
     font-size: 58px;
     margin-bottom: 15px;
+    color:white;
 }
 
 .hero h2 {
@@ -126,6 +127,7 @@ nav a:hover {
 .hero p {
     line-height: 1.7;
     max-width: 500px;
+    color:white;
 }
 
 
@@ -202,7 +204,8 @@ nav a:hover {
 }
 
 .church-image {
-    width: 50%;
+    width: 1000px;
+    object-fit:contain;
 }
 
 .church-image img {
@@ -222,6 +225,9 @@ nav a:hover {
     font-family: Georgia, serif;
     font-size: 40px;
     margin-bottom: 20px;
+}
+.gallery h2{
+    color:white;
 }
 
 .about-text p {
@@ -357,6 +363,8 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
+    object-fit: contain;
+    object-position:centers;
 }
 
 .gallery-container img {
