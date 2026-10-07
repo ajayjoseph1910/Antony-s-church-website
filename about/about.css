@@ -14,7 +14,34 @@ body {
     background: #f7f3e9;
 }
 
+/* translation*/
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
 
+.language-switch button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #f5eee0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.language-switch button.active {
+    color: #e5b84b;
+}
+
+.language-switch button:hover {
+    color: #e5b84b;
+}
+
+.language-switch span {
+    color: #e5b84b;
+    font-size: 14px;
+}
 /* 
    STATIC BACKGROUND
 */
@@ -74,7 +101,12 @@ header {
     font-size: 20px;
     font-weight: bold;
 }
-
+.name{
+    font-size:20px;
+}
+.cross{
+    font-size:18px;
+}
 .logo:first-letter {
     font-size: 30px;
 }
@@ -88,24 +120,26 @@ nav a {
     color: #f5eee0;
     text-decoration: none;
     font-size: 14px;
-
-  
-    pointer-events: none;
-    cursor: default;
 }
 
 nav a:hover {
     color: #e5b84b;
 }
-
 /* 
    ABOUT HERO
  */
+.about-hero {
+    position: relative;
+    z-index: 1;
+}
+/* =========================================
+   ABOUT HERO
+========================================= */
 
 .about-hero {
-       position: relative;
+    position: relative;
 
-    min-height: 600px;
+    min-height: 60vh;
 
     display: flex;
     flex-direction: column;
@@ -114,7 +148,6 @@ nav a:hover {
     padding: 70px 8%;
 
     color: white;
-
 }
 
 .about-hero .small-title {
@@ -128,6 +161,7 @@ nav a:hover {
 
     margin-bottom: 15px;
 }
+
 .about-hero h1 {
     font-family: Georgia, serif;
 
@@ -147,6 +181,7 @@ nav a:hover {
 
     margin-bottom: 20px;
 }
+
 .about-hero .intro {
     line-height: 1.7;
 
@@ -154,7 +189,6 @@ nav a:hover {
 
     color: white;
 }
-
 
 /* 
    COMMON SECTION
@@ -455,15 +489,14 @@ footer p {
         font-size: 10px;
     }
 
-    .about-hero {
-        min-height: 430px;
+   .about-hero {
+    min-height: 60vh;
+    padding: 70px 25px;
+}
 
-        padding: 60px 25px;
-    }
-
-    .about-hero h1 {
-        font-size: 42px;
-    }
+.about-hero h1 {
+    font-size: 40px;
+}
 
     .subtitle {
         font-size: 17px;

@@ -271,7 +271,23 @@ nav a:hover {
 .timing-card p {
     margin: 7px 0;
 }
+.mass-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 22px;
+    background: #e5b84b;
+    color: #071d28;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
 
+.mass-btn:hover {
+    background: #f0ce72;
+    transform: translateY(-2px);
+}
 
 /* EVENTS */
 
