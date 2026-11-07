@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | St. Antony's Church</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+    <div class="background-image"></div>
+
+    <div class="page-content">
+
+        <!-- NAVBAR -->
+        <header>
+            <a class="logo" href="../home/index.html">
+                <span class="cross">✝</span>
+                <span>St. Antony's Church</span>
+            </a>
+
+            <nav>
+                <a href="../home/index.html" data-translate="home">Home</a>
+                <a href="../about/about.html" data-translate="about">About</a>
+                <a href="../mass-timings/mass-timings.html"
+                   data-translate="mass">Mass Timings</a>
+                <a href="../ministries/ministries.html"
+                   data-translate="ministries">Ministries</a>
+                <a href="../events/events.html" data-translate="events">Events</a>
+                <a href="../gallery/gallery.html" class="active"
+                   data-translate="gallery">Gallery</a>
+                <a href="#contact" data-translate="contact">Contact</a>
+
+                <div class="language-switch">
+                    <button type="button" id="englishBtn" class="selected">
+                        English
+                    </button>
+                    <span>|</span>
+                    <button type="button" id="tamilBtn">
+                        தமிழ்
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- HERO -->
+        <section class="gallery-hero">
+            <div class="hero-content">
+                <p class="small-title" data-translate="heroLabel">
+                    OUR GALLERY
+                </p>
+
+                <h1 data-translate="heroTitle">Moments of Faith</h1>
+
+                <p class="subtitle" data-translate="heroSubtitle">
+                    Memories from our parish family
+                </p>
+
+                <p class="intro" data-translate="heroIntro">
+                    A collection of moments that reflect the life, faith
+                    and community of St. Antony's Church.
+                </p>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section class="gallery-section">
+            <div class="section-heading">
+                <span data-translate="sectionLabel">OUR MEMORIES</span>
+                <h2 data-translate="sectionTitle">Church Gallery</h2>
+                <p data-translate="sectionIntro">
+                    Explore moments from the life of our church and
+                    parish community.
+                </p>
+            </div>
+
+            <!-- PHOTO GRID -->
+            <div class="gallery-container">
+
+                <a href="#photo1" class="gallery-item">
+                    <img src="../home/church.jpg"
+                         alt="St. Antony's Church" loading="lazy">
+                    <div class="image-overlay">
+                        <span data-translate="view">VIEW</span>
+                    </div>
+                </a>
+
+                <a href="#photo2" class="gallery-item">
+                    <img src="../home/church1.jpg"
+                         alt="Church photograph 2" loading="lazy">
+                    <div class="image-overlay">
+                        <span data-translate="view">VIEW</span>
+                    </div>
+                </a>
+
+                <a href="#photo3" class="gallery-item">
+                    <img src="../home/church2.jpg"
+                         alt="Church photograph 3" loading="lazy">
+                    <div class="image-overlay">
+                        <span data-translate="view">VIEW</span>
+                    </div>
+                </a>
+
+                <a href="#photo4" class="gallery-item">
+                    <img src="../home/church3.jpg"
+                         alt="Church photograph 4" loading="lazy">
+                    <div class="image-overlay">
+                        <span data-translate="view">VIEW</span>
+                    </div>
+                </a>
+
+                <a href="#photo5" class="gallery-item">
+                    <img src="../home/church4.jpg"
+                         alt="Church photograph 5" loading="lazy">
+                    <div class="image-overlay">
+                        <span data-translate="view">VIEW</span>
+                    </div>
+                </a>
+
+                <a href="#photo6" class="gallery-item">
+                    <img src="../home/hero.jpg"
+                         alt="Church photograph 6" loading="lazy">
+                    <div class="image-overlay">
+                        <span data-translate="view">VIEW</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- LIGHTBOXES -->
+        <div id="photo1" class="lightbox">
+            <a href="#" class="close" aria-label="Close image">&times;</a>
+            <img src="../home/church.jpg" alt="St. Antony's Church">
+        </div>
+
+        <div id="photo2" class="lightbox">
+            <a href="#" class="close" aria-label="Close image">&times;</a>
+            <img src="../home/church1.jpg" alt="Church photograph 2">
+        </div>
+
+        <div id="photo3" class="lightbox">
+            <a href="#" class="close" aria-label="Close image">&times;</a>
+            <img src="../home/church2.jpg" alt="Church photograph 3">
+        </div>
+
+        <div id="photo4" class="lightbox">
+            <a href="#" class="close" aria-label="Close image">&times;</a>
+            <img src="../home/church3.jpg" alt="Church photograph 4">
+        </div>
+
+        <div id="photo5" class="lightbox">
+            <a href="#" class="close" aria-label="Close image">&times;</a>
+            <img src="../home/church4.jpg" alt="Church photograph 5">
+        </div>
+
+        <div id="photo6" class="lightbox">
+            <a href="#" class="close" aria-label="Close image">&times;</a>
+            <img src="../home/hero.jpg" alt="Church photograph 6">
+        </div>
+
+        <!-- BIBLE VERSE -->
+        <section class="verse">
+            <p data-translate="verse">
+                “How good and pleasant it is when God's people live
+                together in unity!”
+            </p>
+            <span>— Psalm 133:1</span>
+        </section>
+
+        <!-- WELCOME SECTION -->
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <p class="small-title" data-translate="welcomeLabel">
+                    OUR PARISH FAMILY
+                </p>
+
+                <h2>
+                    <span data-translate="welcomeLine1">Every moment</span>
+                    <br>
+                    <span data-translate="welcomeLine2">becomes a memory.</span>
+                </h2>
+
+                <p data-translate="welcomeText">
+                    May every gathering, celebration and moment of prayer
+                    continue to bring our parish family closer together.
+                </p>
+            </div>
+        </section>
+
+        <!-- FOOTER / CONTACT TARGET -->
+        <footer id="contact">
+            <h3>St. Antony's Church</h3>
+            <p data-translate="tagline">A Home for Prayer, a Family in Christ</p>
+            <div class="footer-line"></div>
+            <p class="copyright" data-translate="copyright">
+                © 2026 St. Antony's Church. All Rights Reserved.
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

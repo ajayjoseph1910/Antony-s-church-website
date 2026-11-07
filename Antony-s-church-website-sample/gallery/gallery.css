@@ -1,0 +1,702 @@
+
+/* ==============================
+   RESET AND BASE
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #10232c;
+    background: #f7f3e9;
+    padding-top: 75px;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ==============================
+   BACKGROUND
+============================== */
+
+.background-image {
+    position: fixed;
+    inset: 0;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../home/hero1.png") center / cover no-repeat;
+    z-index: -1;
+}
+
+.page-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* ==============================
+   FIXED NAVBAR
+============================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    padding: 0 5%;
+    background: #061923;
+    color: #e5b84b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #e5b84b;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo .cross {
+    font-size: 29px;
+    line-height: 1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 19px;
+}
+
+nav > a {
+    position: relative;
+    color: #f5eee0;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 14px;
+    transition: color 0.25s ease;
+    padding: 8px 0;
+}
+
+nav > a {
+    color: #f5eee0;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+}
+
+nav > a:hover {
+    color: #e5b84b;
+}
+
+nav > a.active {
+    color: #e5b84b;
+}
+
+/* Language selector */
+
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    color: #e5b84b;
+    font-size: 13px;
+}
+
+.language-switch button {
+    border: none;
+    background: transparent;
+    color: #f5eee0;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 5px 2px;
+    transition: color 0.2s ease;
+}
+
+.language-switch button:hover,
+.language-switch button.selected {
+    color: #e5b84b;
+    font-weight: bold;
+}
+
+/* ==============================
+   HERO
+============================== */
+
+.gallery-hero {
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(6, 25, 35, 0.35),
+            rgba(6, 25, 35, 0.35)
+        ),
+        url("../home/hero1.png") center 45% / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.gallery-hero .small-title,
+.welcome-content .small-title {
+    color: #e5b84b;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.gallery-hero h1 {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    font-weight: normal;
+    line-height: 1.15;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.gallery-hero .subtitle {
+    color: #e5b84b;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.gallery-hero .intro {
+    max-width: 510px;
+    color: #f5eee0;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* ==============================
+   GALLERY SECTION
+============================== */
+
+.gallery-section {
+    background: #f7f3e9;
+    padding: 85px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin: 0 auto 48px;
+    max-width: 700px;
+}
+
+.section-heading span {
+    color: #b18a2e;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: normal;
+    color: #10232c;
+    margin-top: 12px;
+}
+
+.section-heading p {
+    max-width: 600px;
+    margin: 14px auto 0;
+    color: #667278;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ==============================
+   GALLERY GRID
+============================== */
+
+.gallery-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    display: block;
+    height: 285px;
+    overflow: hidden;
+    background: #061923;
+    text-decoration: none;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+.gallery-item:focus-visible {
+    outline: 3px solid #e5b84b;
+    outline-offset: 3px;
+}
+
+/* Image overlay */
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(6, 25, 35, 0);
+    transition: background 0.3s ease;
+}
+
+.image-overlay span {
+    color: #fff;
+    border: 1px solid #e5b84b;
+    padding: 11px 20px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item:hover .image-overlay,
+.gallery-item:focus-visible .image-overlay {
+    background: rgba(6, 25, 35, 0.58);
+}
+
+.gallery-item:hover .image-overlay span,
+.gallery-item:focus-visible .image-overlay span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==============================
+   LIGHTBOX
+============================== */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 45px;
+    z-index: 1000;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox img {
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 42px;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.close:hover {
+    color: #e5b84b;
+}
+
+/* ==============================
+   BIBLE VERSE
+============================== */
+
+.verse {
+    background: #071d28;
+    color: #fff;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.verse p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.verse span {
+    display: block;
+    margin-top: 20px;
+    color: #e5b84b;
+    font-size: 14px;
+}
+
+/* ==============================
+   WELCOME SECTION
+============================== */
+
+.welcome-section {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 25px;
+    background:
+        linear-gradient(
+            rgba(6, 25, 35, 0.90),
+            rgba(6, 25, 35, 0.90)
+        ),
+        url("../home/hero1.png") center / cover no-repeat;
+}
+
+.welcome-content {
+    max-width: 660px;
+    color: #fff;
+}
+
+.welcome-content h2 {
+    font-family: Georgia, serif;
+    font-size: 46px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.welcome-content > p:last-child {
+    max-width: 600px;
+    margin: 0 auto;
+    color: rgba(245, 238, 224, 0.82);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+    scroll-margin-top: 75px;
+    background: #061923;
+    color: #f5eee0;
+    text-align: center;
+    padding: 48px 20px;
+}
+
+footer h3 {
+    color: #e5b84b;
+    font-family: Georgia, serif;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: rgba(245, 238, 224, 0.75);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.footer-line {
+    width: 50px;
+    height: 1px;
+    background: #e5b84b;
+    margin: 23px auto;
+}
+
+.copyright {
+    font-size: 11px;
+}
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 1150px) {
+    header {
+        padding: 0 3%;
+        gap: 14px;
+    }
+
+    .logo {
+        font-size: 18px;
+        gap: 7px;
+    }
+
+    .logo .cross {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 13px;
+    }
+
+    nav > a {
+        font-size: 12px;
+    }
+
+    .language-switch,
+    .language-switch button {
+        font-size: 12px;
+    }
+
+    .gallery-container {
+        gap: 15px;
+    }
+
+    .gallery-item {
+        height: 250px;
+    }
+}
+
+/* ==============================
+   MOBILE NAVIGATION
+============================== */
+
+@media (max-width: 800px) {
+    body {
+        padding-top: 0;
+    }
+
+    header {
+        height: auto;
+        min-height: 0;
+        padding: 14px 18px 13px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .logo {
+        justify-content: center;
+        font-size: 19px;
+    }
+
+    .logo .cross {
+        font-size: 26px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: 18px;
+        row-gap: 5px;
+    }
+
+    nav > a {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+
+    .language-switch {
+        width: 100%;
+        justify-content: center;
+        padding-top: 3px;
+    }
+
+    .gallery-hero {
+        min-height: 390px;
+        margin-top: 145px;
+        padding: 55px 25px;
+        background-position: center;
+    }
+
+    .gallery-hero h1 {
+        font-size: 40px;
+    }
+
+    .gallery-section {
+        padding: 65px 22px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 31px;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    .gallery-item {
+        height: 210px;
+    }
+
+    /* Keep VIEW accessible on touchscreens */
+    .image-overlay {
+        background: rgba(6, 25, 35, 0.22);
+    }
+
+    .image-overlay span {
+        opacity: 1;
+        transform: none;
+        padding: 8px 13px;
+    }
+
+    .verse {
+        padding: 55px 22px;
+    }
+
+    .verse p {
+        font-size: 23px;
+    }
+
+    .welcome-section {
+        min-height: 350px;
+    }
+
+    .welcome-content h2 {
+        font-size: 38px;
+    }
+}
+
+/* ==============================
+   SMALL MOBILE
+============================== */
+
+@media (max-width: 480px) {
+    header {
+        padding: 12px 12px;
+        gap: 9px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    nav {
+        column-gap: 13px;
+    }
+
+    nav > a {
+        font-size: 11px;
+    }
+
+    .gallery-hero {
+        margin-top: 150px;
+        min-height: 360px;
+        padding: 45px 20px;
+    }
+
+    .gallery-hero h1 {
+        font-size: 33px;
+    }
+
+    .gallery-hero .subtitle {
+        font-size: 17px;
+    }
+
+    .gallery-hero .intro {
+        font-size: 13px;
+    }
+
+    .gallery-section {
+        padding: 55px 14px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+    }
+
+    .gallery-container {
+        gap: 9px;
+    }
+
+    .gallery-item {
+        height: 155px;
+    }
+
+    .image-overlay span {
+        font-size: 9px;
+        letter-spacing: 2px;
+        padding: 7px 10px;
+    }
+
+    .lightbox {
+        padding: 15px;
+    }
+
+    .lightbox img {
+        max-width: 100%;
+        max-height: 78vh;
+    }
+
+    .close {
+        top: 15px;
+        right: 17px;
+        font-size: 36px;
+    }
+
+    .verse p {
+        font-size: 20px;
+    }
+
+    .welcome-content h2 {
+        font-size: 33px;
+    }
+}

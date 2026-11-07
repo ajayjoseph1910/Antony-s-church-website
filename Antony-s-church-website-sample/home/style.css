@@ -1,0 +1,952 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 95px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f3e9;
+    color: #10232c;
+    padding-top: 75px;
+}
+
+/* FIXED NAVBAR */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 75px;
+    z-index: 1000;
+    background: #061923;
+    color: #e5b84b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 12px 5%;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo:first-letter {
+    font-size: 30px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+nav a {
+    color: #f5eee0;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ff9800;
+}
+
+/* ENGLISH / TAMIL SWITCH */
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-left: 3px;
+    white-space: nowrap;
+}
+
+.language-switch button {
+    background: none;
+    border: none;
+    color: #f5eee0;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+    padding: 4px 0;
+    transition: color 0.25s ease;
+}
+
+.language-switch button:hover,
+.language-switch button.active {
+    color: #ff9800;
+}
+
+.language-switch span {
+    color: #f5eee0;
+    font-size: 14px;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    min-height: 60vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("hero1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.small-title {
+    color: #c99b32;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 58px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.hero h2 {
+    color: #e5b84b;
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    line-height: 1.7;
+    max-width: 500px;
+    color: white;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.gold {
+    background: #d6aa3c;
+    color: #071921;
+}
+
+.outline {
+    border: 1px solid #d6aa3c;
+    color: white;
+}
+
+/* QUICK INFO */
+.quick-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #f7f3e9;
+    padding: 40px 8%;
+}
+
+.quick-info div {
+    text-align: center;
+    padding: 20px;
+    border-right: 1px solid #d8ccb3;
+}
+
+.quick-info div:last-child {
+    border: none;
+}
+
+.quick-info span {
+    font-size: 30px;
+    color: #b88620;
+}
+
+.quick-info h3 {
+    margin: 10px 0;
+    font-family: Georgia, serif;
+}
+
+/* ABOUT */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 90px 8%;
+    background: white;
+}
+
+.church-image {
+    width: 100%;
+    max-width: 600px;
+    flex: 1;
+}
+
+.church-image img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.about-text {
+    max-width: 500px;
+    flex: 1;
+}
+
+.about-text h2,
+.mass h2,
+.events h2,
+.ministries h2,
+.gallery h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* MASS */
+.mass {
+    background: #071d28;
+    color: white;
+    padding: 70px 8%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.mass > div:first-child {
+    flex: 1 1 250px;
+}
+
+.timing-card {
+    background: #102d3b;
+    border: 1px solid #705a27;
+    padding: 30px;
+    min-width: 180px;
+}
+
+.timing-card h3 {
+    color: #e5b84b;
+    margin-bottom: 15px;
+}
+
+.timing-card p {
+    margin: 8px 0;
+}
+
+.mass-btn {
+    display: inline-block;
+    background: #d6aa3c;
+    color: #071921;
+    padding: 12px 22px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.mass-btn:hover,
+.btn.gold:hover {
+    background: #edc55f;
+}
+
+/* EVENTS */
+.events {
+    padding: 80px 8%;
+    background: #f7f3e9;
+}
+
+.events h2 {
+    color: #10232c;
+}
+
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.event-card {
+    background: white;
+    padding: 30px;
+    border-left: 4px solid #d0a438;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.date {
+    color: #a77b1b;
+    margin-bottom: 20px;
+}
+
+.date strong {
+    display: block;
+    font-size: 35px;
+}
+
+.event-card h3 {
+    margin-bottom: 10px;
+}
+
+/* MINISTRIES */
+.ministries {
+    padding: 70px 8%;
+    background: white;
+}
+
+.ministry-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.ministry-container div {
+    padding: 30px 10px;
+    text-align: center;
+    border: 1px solid #ddd3bd;
+    border-radius: 6px;
+    line-height: 2;
+}
+
+/* VERSE */
+.verse {
+    background: #071d28;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.verse p {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.verse span {
+    display: block;
+    margin-top: 20px;
+    color: #e5b84b;
+}
+
+/* GALLERY */
+.gallery {
+    padding: 80px 8%;
+    background: #071d28;
+}
+
+.gallery h2 {
+    color: white;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* CONTACT FOOTER AT BOTTOM */
+footer {
+    scroll-margin-top: 90px;
+    background: #061923;
+    color: white;
+    padding: 60px 8%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+}
+
+footer h2,
+footer h3 {
+    color: #e5b84b;
+    margin-bottom: 15px;
+}
+
+footer p {
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+footer a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 8px 0;
+}
+
+footer a:hover {
+    color: #ff9800;
+}
+
+.copyright {
+    background: #041219;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   Desktop, Tablet and Mobile
+========================================= */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1100px) {
+    header {
+        padding: 12px 3%;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .language-switch button,
+    .language-switch span {
+        font-size: 13px;
+    }
+
+    .event-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ministry-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .quick-info {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .about {
+        gap: 35px;
+    }
+
+
+/* Tablets and mobile devices */
+@media (max-width: 800px) {
+    html {
+        scroll-padding-top: 150px;
+    }
+
+    body {
+        padding-top: 0;
+    }
+
+    /* Keep header fixed on mobile */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: auto;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+        padding: 12px 16px;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+        white-space: normal;
+        text-align: center;
+        font-size: 19px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 16px;
+    }
+
+    nav a {
+        font-size: 13px;
+        white-space: normal;
+    }
+
+    .language-switch {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    /* Space below the fixed header */
+    .hero {
+        margin-top: 145px;
+        min-height: 55vh;
+        padding: 55px 25px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 6vw, 44px);
+        overflow-wrap: anywhere;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .buttons {
+        gap: 12px;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    /* Quick information */
+    .quick-info {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 25px 4%;
+    }
+
+    .quick-info div {
+        padding: 18px 10px;
+        border-bottom: 1px solid #d8ccb3;
+    }
+
+    .quick-info div:nth-child(2) {
+        border-right: none;
+    }
+
+    .quick-info div:nth-child(3),
+    .quick-info div:nth-child(4) {
+        border-bottom: none;
+    }
+
+    /* About section */
+    .about {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+        padding: 50px 6%;
+    }
+
+    .church-image,
+    .about-text {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .church-image img {
+        height: auto;
+    }
+
+    /* Mass timings */
+    .mass {
+        padding: 50px 6%;
+        gap: 20px;
+    }
+
+    .mass > div:first-child {
+        flex-basis: 100%;
+    }
+
+    .timing-card {
+        width: 100%;
+        min-width: 0;
+        padding: 24px;
+    }
+
+    /* Events */
+    .events {
+        padding: 50px 6%;
+    }
+
+    .event-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .event-card {
+        min-width: 0;
+        padding: 20px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Ministries */
+    .ministries {
+        padding: 50px 6%;
+    }
+
+    .ministry-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .ministry-container div {
+        min-width: 0;
+        padding: 20px 8px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Bible verse */
+    .verse {
+        padding: 50px 20px;
+    }
+
+    .verse p {
+        font-size: clamp(21px, 4vw, 28px);
+        line-height: 1.6;
+    }
+
+    /* Gallery */
+    .gallery {
+        padding: 50px 6%;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .gallery-container img {
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+    }
+
+    /* Contact footer */
+    footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+        padding: 40px 6%;
+    }
+
+    footer > div:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+    html {
+        scroll-padding-top: 175px;
+    }
+
+    header {
+        gap: 8px;
+        padding: 10px 8px;
+    }
+
+    .logo {
+        font-size: 17px;
+        gap: 7px;
+    }
+
+    nav {
+        gap: 8px 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .language-switch {
+        gap: 8px;
+    }
+
+    .language-switch button,
+    .language-switch span {
+        font-size: 12px;
+    }
+
+    .hero {
+        margin-top: 155px;
+        min-height: auto;
+        padding: 45px 18px;
+    }
+
+    .small-title {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        line-height: 1.25;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px 15px;
+    }
+
+    .quick-info {
+        padding: 20px 8px;
+    }
+
+    .quick-info div {
+        padding: 15px 6px;
+    }
+
+    .quick-info h3 {
+        font-size: 16px;
+    }
+
+    .quick-info p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .quick-info span {
+        font-size: 25px;
+    }
+
+    .about,
+    .mass,
+    .events,
+    .ministries,
+    .gallery {
+        padding: 40px 18px;
+    }
+
+    .about-text h2,
+    .mass h2,
+    .events h2,
+    .ministries h2,
+    .gallery h2 {
+        font-size: 28px;
+    }
+
+    .event-container {
+        grid-template-columns: 1fr;
+    }
+
+    .event-card {
+        padding: 22px;
+    }
+
+    .ministry-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .ministry-container div {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-container img {
+        height: 220px;
+    }
+
+    .verse {
+        padding: 40px 18px;
+    }
+
+    .verse p {
+        font-size: 21px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 35px 20px;
+    }
+
+    footer > div:first-child {
+        grid-column: auto;
+    }
+
+    .copyright {
+        padding: 15px 10px;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+}
+
+/* Very narrow phones */
+@media (max-width: 360px) {
+    .logo {
+        font-size: 15px;
+    }
+
+    nav {
+        gap: 8px 10px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .ministry-container {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-info {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-info div {
+        border-right: none;
+        border-bottom: 1px solid #d8ccb3;
+    }
+
+    .quick-info div:last-child {
+        border-bottom: none;
+    }
+}
+}
+/* Tamil font size adjustment */
+html[lang="ta"] body {
+    font-size: 14px;
+}
+
+html[lang="ta"] .logo {
+    font-size: 18px;
+}
+
+html[lang="ta"] nav a {
+    font-size: 13px;
+}
+
+html[lang="ta"] .hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+html[lang="ta"] .hero h2 {
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+html[lang="ta"] .hero p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+html[lang="ta"] .small-title {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Smaller screens */
+@media (max-width: 800px) {
+    html[lang="ta"] .logo {
+        font-size: 16px;
+    }
+
+    html[lang="ta"] nav a {
+        font-size: 12px;
+    }
+
+    html[lang="ta"] .hero h1 {
+        font-size: 34px;
+    }
+
+    html[lang="ta"] .hero h2 {
+        font-size: 20px;
+    }
+
+    html[lang="ta"] .hero p {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,604 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 95px;
+}
+
+body {
+    padding-top: 75px;
+    font-family: Arial, sans-serif;
+    background: #f7f3e9;
+    color: #10232c;
+}
+
+.background-image {
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.548), rgba(0, 0, 0, 0.548)),
+        url("hero1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.page-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* FIXED HEADER — MATCH HOME PAGE */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 75px;
+    z-index: 1000;
+    background: #061923;
+    color: #e5b84b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 12px 5%;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.name {
+    font-size: 20px;
+}
+
+.cross {
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+nav a {
+    color: #f5eee0;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ff9800;
+}
+
+/* ENGLISH / TAMIL SWITCH */
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-left: 3px;
+    white-space: nowrap;
+}
+
+.language-switch button {
+    background: none;
+    border: none;
+    color: #f5eee0;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+    padding: 4px 0;
+}
+
+.language-switch button:hover,
+.language-switch button.active {
+    color: #ff9800;
+}
+
+.language-switch span {
+    color: #f5eee0;
+    font-size: 14px;
+}
+
+/* ABOUT HERO */
+.about-hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 8%;
+    color: white;
+}
+
+.about-hero .small-title {
+    color: #c99b32;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.about-hero h1 {
+    font-family: Georgia, serif;
+    font-size: 58px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.about-hero .subtitle {
+    color: #e5b84b;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.about-hero .intro {
+    line-height: 1.7;
+    max-width: 500px;
+    color: white;
+    font-size: 16px;
+}
+
+/* COMMON SECTIONS */
+.about-section,
+.history-section,
+.address-section {
+    background: #f7f3e9;
+    padding: 90px 10%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading span {
+    color: #b18a2e;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    line-height: 1.3;
+    font-weight: normal;
+    color: #10232c;
+    margin-top: 10px;
+}
+
+.section-heading p {
+    margin-top: 12px;
+    color: #667278;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* DESCRIPTION */
+.description-box {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 45px;
+    border-left: 4px solid #e5b84b;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+.description-box p {
+    color: #526068;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.description-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* HISTORY */
+.history-section {
+    background: white;
+}
+
+.history-item {
+    max-width: 1050px;
+    margin: 0 auto 80px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 60px;
+    align-items: center;
+}
+
+.history-item:last-child {
+    margin-bottom: 0;
+}
+
+.history-item.reverse {
+    direction: rtl;
+}
+
+.history-item.reverse .history-text {
+    direction: ltr;
+}
+
+.history-image {
+    height: 320px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.history-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.history-image:hover img {
+    transform: scale(1.04);
+}
+
+.history-text {
+    padding: 10px;
+}
+
+.year {
+    display: inline-block;
+    color: #b18a2e;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.history-text h3 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    line-height: 1.3;
+    font-weight: normal;
+    color: #10232c;
+    margin-bottom: 18px;
+}
+
+.history-text p {
+    color: #59676e;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* ADDRESS */
+.address-section {
+    background: #f7f3e9;
+}
+
+.address-card {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 35px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border-top: 3px solid #e5b84b;
+}
+
+.address-icon {
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #061923;
+    border-radius: 50%;
+    font-size: 23px;
+}
+
+.address-card h3 {
+    font-family: Georgia, serif;
+    color: #10232c;
+    margin-bottom: 10px;
+}
+
+.address-card p {
+    color: #59676e;
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+/* CONTACT FOOTER */
+footer {
+    scroll-margin-top: 90px;
+    background: #061923;
+    color: #f5eee0;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+footer h3 {
+    color: #e5b84b;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: rgba(245, 238, 224, 0.7);
+}
+
+.footer-line {
+    width: 50px;
+    height: 1px;
+    background: #e5b84b;
+    margin: 25px auto;
+}
+
+.copyright {
+    font-size: 10px;
+}
+
+/* TABLET */
+@media (max-width: 1100px) {
+    header {
+        padding: 12px 3%;
+        gap: 12px;
+    }
+
+    .logo,
+    .name {
+        font-size: 17px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 165px;
+    }
+
+    body {
+        padding-top: 0;
+    }
+
+    header {
+        position: fixed;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .logo {
+        justify-content: center;
+        white-space: normal;
+        text-align: center;
+    }
+
+    nav {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 14px;
+    }
+
+    nav a {
+        font-size: 12px;
+        white-space: normal;
+    }
+
+    .language-switch {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .about-hero {
+        margin-top: 145px;
+        min-height: 55vh;
+        padding: 55px 25px;
+    }
+
+    .about-hero h1 {
+        font-size: 40px;
+    }
+
+    .about-hero .subtitle {
+        font-size: 20px;
+    }
+
+    .about-hero .intro {
+        font-size: 15px;
+    }
+
+    .about-section,
+    .history-section,
+    .address-section {
+        padding: 65px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .description-box {
+        padding: 25px;
+    }
+
+    .history-item,
+    .history-item.reverse {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        direction: ltr;
+        margin-bottom: 60px;
+    }
+
+    .history-image {
+        width: 100%;
+        height: 240px;
+    }
+
+    .history-text {
+        width: 100%;
+    }
+
+    .history-text h3 {
+        font-size: 26px;
+    }
+
+    .address-card {
+        align-items: flex-start;
+        padding: 25px;
+    }
+
+    .background-image {
+        background-position: 80% center;
+    }
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+    html {
+        scroll-padding-top: 175px;
+    }
+
+    .logo,
+    .name {
+        font-size: 15px;
+    }
+
+    nav {
+        gap: 8px 10px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .about-hero {
+        margin-top: 150px;
+        padding: 45px 18px;
+    }
+
+    .about-hero h1 {
+        font-size: 32px;
+    }
+
+    .about-hero .subtitle {
+        font-size: 18px;
+    }
+
+    .about-hero .intro {
+        font-size: 14px;
+    }
+
+    .about-section,
+    .history-section,
+    .address-section {
+        padding: 45px 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .description-box {
+        padding: 22px;
+    }
+
+    .history-image {
+        height: 210px;
+    }
+
+    .history-text h3 {
+        font-size: 24px;
+    }
+
+    .address-card {
+        gap: 15px;
+        padding: 20px;
+    }
+
+    footer {
+        padding: 40px 18px;
+    }
+}
+
+/* TAMIL TYPOGRAPHY */
+html[lang="ta"] .name {
+    font-size: 18px;
+}
+
+html[lang="ta"] nav a {
+    font-size: 13px;
+}
+
+html[lang="ta"] .about-hero h1 {
+    font-size: 48px;
+}
+
+html[lang="ta"] .section-heading h2 {
+    font-size: 34px;
+}
+
+html[lang="ta"] .history-text h3 {
+    font-size: 27px;
+}
+
+@media (max-width: 768px) {
+    html[lang="ta"] .name {
+        font-size: 16px;
+    }
+
+    html[lang="ta"] nav a {
+        font-size: 12px;
+    }
+
+    html[lang="ta"] .about-hero h1 {
+        font-size: 33px;
+    }
+
+    html[lang="ta"] .section-heading h2 {
+        font-size: 26px;
+    }
+
+    html[lang="ta"] .history-text h3 {
+        font-size: 23px;
+    }
+}

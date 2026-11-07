@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. Antony's Church</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- FIXED HEADER -->
+    <header>
+        <div class="logo">
+            ✝
+            <span>St. Antony's Church</span>
+        </div>
+
+        <nav>
+            <a href="index.html" class="active" data-key="navHome">Home</a>
+            <a href="../about/about.html" data-key="navAbout">About</a>
+            <a href="../mass-timings/mass-timings.html" data-key="navMass">Mass Timings</a>
+            <a href="../ministries/ministries.html" data-key="navMinistries">Ministries</a>
+            <a href="../events/events.html" data-key="navEvents">Events</a>
+            <a href="../gallery/gallery.html" data-key="navGallery">Gallery</a>
+            <a href="#contact" data-key="navContact">Contact</a>
+
+            <div class="language-switch">
+                <button type="button" id="englishBtn" class="active">English</button>
+                <span>|</span>
+                <button type="button" id="tamilBtn">தமிழ்</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="small-title" data-key="welcome">WELCOME TO</p>
+            <h1 data-key="heroTitle">St. Antony's Church</h1>
+            <h2 data-key="heroSubtitle">A Home for Prayer, A Family in Christ</h2>
+
+            <p data-key="heroText">
+                United in faith, hope and love,
+                following the example of St. Antony
+                and serving God and one another.
+            </p>
+
+            <div class="buttons">
+                <a href="../mass-timings/mass-timings.html"
+                   class="btn gold" data-key="joinMass">Join Us for Mass</a>
+                <a href="../about/about.html"
+                   class="btn outline" data-key="learnMore">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK INFO -->
+    <section class="quick-info">
+        <div>
+            <span>✝</span>
+            <h3 data-key="quickMass">Mass Timings</h3>
+            <p data-key="quickMassText">Sunday &amp; Weekday Masses</p>
+        </div>
+
+        <div>
+            <span>🕊</span>
+            <h3 data-key="confession">Confession</h3>
+            <p data-key="confessionText">Every Saturday</p>
+        </div>
+
+        <div>
+            <span>🙏</span>
+            <h3 data-key="prayer">Prayer Requests</h3>
+            <p data-key="prayerText">Let us pray for you</p>
+        </div>
+
+        <div>
+            <span>👥</span>
+            <h3 data-key="community">Our Community</h3>
+            <p data-key="communityText">A family in Christ</p>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="church-image">
+            <img src="church.jpg" alt="St. Antony's Church">
+        </div>
+
+        <div class="about-text">
+            <p class="small-title" data-key="aboutLabel">ABOUT US</p>
+            <h2 data-key="aboutHeading">St. Antony's Church</h2>
+
+            <p data-key="aboutText">
+                St. Antony's Church is a place of worship,
+                prayer and community. We come together as
+                one family to grow in faith and live the
+                Gospel in our daily lives.
+            </p>
+
+            <a href="../about/about.html" class="btn gold" data-key="ourStory">
+                Our Story →
+            </a>
+        </div>
+    </section>
+
+    <!-- MASS TIMINGS -->
+    <section class="mass" id="mass">
+        <div>
+            <p class="small-title" data-key="joinUs">JOIN US</p>
+            <h2 data-key="massHeading">Mass Timings</h2>
+            <p data-key="massText">
+                Come together with our parish family
+                for prayer and celebration.
+            </p>
+        </div>
+
+        <div class="timing-card">
+            <h3 data-key="sundayMass">Sunday Mass</h3>
+            <p>7:00 AM</p>
+            <p>9:00 AM</p>
+            <p>6:00 PM</p>
+        </div>
+
+        <div class="timing-card">
+            <h3 data-key="weekdayMass">Weekday Mass</h3>
+            <p data-key="weekdays">Monday – Saturday</p>
+            <p>6:30 AM</p>
+        </div>
+
+        <a href="../mass-timings/mass-timings.html"
+           class="mass-btn" data-key="viewMass">
+            View Full Mass Timings →
+        </a>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="events" id="events">
+        <p class="small-title" data-key="eventsLabel">UPCOMING EVENTS</p>
+        <h2 data-key="eventsHeading">Be Part of Our Journey</h2>
+
+        <div class="event-container">
+            <div class="event-card">
+                <div class="date"><strong>13</strong> SEP</div>
+                <h3 data-key="event1">St. Antony Feast</h3>
+                <p data-key="eventPlace1">Church Premises</p>
+            </div>
+
+            <div class="event-card">
+                <div class="date"><strong>21</strong> SEP</div>
+                <h3 data-key="event2">Youth Fellowship</h3>
+                <p data-key="eventPlace2">Parish Hall</p>
+            </div>
+
+            <div class="event-card">
+                <div class="date"><strong>28</strong> SEP</div>
+                <h3 data-key="event3">Bible Study</h3>
+                <p data-key="eventPlace3">Church Hall</p>
+            </div>
+
+            <div class="event-card">
+                <div class="date"><strong>28</strong> SEP</div>
+                <h3 data-key="event4">Bible Study</h3>
+                <p data-key="eventPlace4">Church Hall</p>
+            </div>
+        </div>
+
+        <a href="../events/events.html" class="mass-btn" data-key="viewEvents">
+            View all events →
+        </a>
+    </section>
+
+    <!-- MINISTRIES -->
+    <section class="ministries" id="ministries">
+        <p class="small-title" data-key="ministriesLabel">OUR MINISTRIES</p>
+        <h2 data-key="ministriesHeading">Serving Together</h2>
+
+        <div class="ministry-container">
+            <div>✝<br><span data-key="ministry1">Altar Servers</span></div>
+            <div>👩<br><span data-key="ministry2">Legion of Mary</span></div>
+            <div>👥<br><span data-key="ministry3">Youth Ministry</span></div>
+            <div>📖<br><span data-key="ministry4">Catechism</span></div>
+            <div>🎵<br><span data-key="ministry5">Choir</span></div>
+            <div>❤<br><span data-key="ministry6">Social Service</span></div>
+        </div>
+    </section>
+
+    <!-- BIBLE VERSE -->
+    <section class="verse">
+        <p data-key="verse">“For I know the plans I have for you,”</p>
+        <span data-key="verseRef">— Jeremiah 29:11</span>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+        <p class="small-title" data-key="galleryLabel">OUR GALLERY</p>
+        <h2 data-key="galleryHeading">Moments of Faith</h2>
+
+        <div class="gallery-container">
+            <img src="church1.jpg" alt="Church gallery image">
+            <img src="church2.jpg" alt="Church gallery image">
+            <img src="church3.jpg" alt="Church gallery image">
+            <img src="church4.jpg" alt="Church gallery image">
+        </div>
+
+        <a href="../gallery/gallery.html" class="mass-btn" data-key="viewGallery">
+            View all →
+        </a>
+    </section>
+
+    <!-- CONTACT FOOTER AT BOTTOM -->
+    <footer id="contact">
+        <div>
+            <h2>✝ <span data-key="footerChurch">St. Antony's Church</span></h2>
+            <p data-key="footerTag">Faith • Hope • Love</p>
+        </div>
+
+        <div>
+            <h3 data-key="quickLinks">Quick Links</h3>
+            <a href="index.html" data-key="navHome">Home</a>
+            <a href="../about/about.html" data-key="navAbout">About</a>
+            <a href="../mass-timings/mass-timings.html" data-key="navMass">Mass Timings</a>
+            <a href="../events/events.html" data-key="navEvents">Events</a>
+        </div>
+
+        <div>
+            <h3 data-key="footerContact">Contact</h3>
+            <p data-key="location">📍 St. Antony's Church</p>
+            <p>📞 +91 XXXXX XXXXX</p>
+            <p>✉️ church@email.com</p>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        © 2026 St. Antony's Church. All Rights Reserved.
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,801 @@
+
+/* =========================================
+   RESET AND GLOBAL STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 95px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #10232c;
+    background: #f7f3e9;
+    padding-top: 75px;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================
+   FIXED HEADER — MATCH OTHER PAGES
+========================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 75px;
+    z-index: 1000;
+    background: #061923;
+    color: #e5b84b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 5%;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo .cross {
+    font-size: 30px;
+    line-height: 1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+nav a {
+    color: #f5eee0;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ff9800;
+}
+
+/* =========================================
+   ENGLISH | TAMIL LANGUAGE SWITCH
+========================================= */
+
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+}
+
+.language-switch button {
+    padding: 4px 0;
+    border: none;
+    background: transparent;
+    color: #f5eee0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+
+.language-switch button:hover,
+.language-switch button.active {
+    color: #ff9800;
+}
+
+.language-switch span {
+    color: #f5eee0;
+}
+
+/* =========================================
+   STATIC BACKGROUND
+========================================= */
+
+.background-image {
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.548),
+            rgba(0, 0, 0, 0.548)
+        ),
+        url("../home/hero1.png");
+    background-size: cover;
+    background-position: 80% center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.page-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================
+   MINISTRIES HERO — MATCH MASS TIMINGS
+========================================= */
+
+.ministries-hero {
+    position: relative;
+    min-height: 60vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 70px 8%;
+    color: white;
+    isolation: isolate;
+}
+
+.ministries-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../home/hero1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.ministries-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+.ministries-hero .small-title {
+    color: #e5b84b;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.ministries-hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.ministries-hero .subtitle {
+    color: #e5b84b;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.ministries-hero .intro {
+    line-height: 1.8;
+    max-width: 550px;
+    color: #f5eee0;
+    font-size: 16px;
+}
+
+/* =========================================
+   COMMON SECTION STYLES
+========================================= */
+
+.ministries-section,
+.serve-section {
+    background: #f7f3e9;
+    padding: 90px 10%;
+}
+
+.section-heading {
+    text-align: center;
+    margin: 0 auto 55px;
+    max-width: 750px;
+}
+
+.section-heading span {
+    color: #a77b1b;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 40px);
+    font-weight: normal;
+    color: #10232c;
+    line-height: 1.3;
+    margin-top: 10px;
+}
+
+.section-heading p {
+    max-width: 650px;
+    margin: 12px auto 0;
+    color: #667278;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   MINISTRY GRID
+========================================= */
+
+.ministry-container {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.ministry-card {
+    background: white;
+    padding: 35px 30px;
+    text-align: center;
+    border-top: 3px solid #e5b84b;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ministry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.ministry-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #061923;
+    color: #e5b84b;
+    font-size: 25px;
+}
+
+.ministry-card h3 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    line-height: 1.4;
+    font-weight: normal;
+    color: #10232c;
+    margin-bottom: 15px;
+}
+
+.ministry-card p {
+    color: #59676e;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   SERVING SECTION
+========================================= */
+
+.serving-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-height: 520px;
+}
+
+.serving-image {
+    min-height: 520px;
+    background-image:
+        linear-gradient(
+            rgba(6, 25, 35, 0.55),
+            rgba(6, 25, 35, 0.55)
+        ),
+        url("../home/hero1.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.image-overlay {
+    padding: 30px;
+}
+
+.image-overlay .small-title {
+    color: #e5b84b;
+}
+
+.image-overlay h2 {
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-top: 15px;
+}
+
+.serving-text {
+    background: white;
+    padding: 80px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.serving-text h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-weight: normal;
+    color: #10232c;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.serving-text > p:not(.small-title) {
+    color: #59676e;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* =========================================
+   GET INVOLVED
+========================================= */
+
+.serve-container {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.serve-card {
+    background: white;
+    padding: 35px;
+    border-left: 4px solid #e5b84b;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+.serve-card > span {
+    color: #b18a2e;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.serve-card h3 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    color: #10232c;
+    margin: 12px 0;
+}
+
+.serve-card p {
+    color: #59676e;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   BIBLE VERSE
+========================================= */
+
+.verse {
+    background: #071d28;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.verse p {
+    max-width: 800px;
+    margin: auto;
+    font-family: Georgia, serif;
+    font-size: clamp(22px, 3vw, 30px);
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.verse span {
+    display: block;
+    margin-top: 20px;
+    color: #e5b84b;
+}
+
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.welcome-section {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+    background:
+        linear-gradient(
+            rgba(6, 25, 35, 0.90),
+            rgba(6, 25, 35, 0.90)
+        ),
+        url("../home/hero1.png") center / cover no-repeat;
+}
+
+.welcome-content {
+    max-width: 650px;
+    color: white;
+}
+
+.welcome-content .small-title {
+    color: #e5b84b;
+}
+
+.welcome-content h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(36px, 4vw, 50px);
+    font-weight: normal;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.welcome-content p:last-child {
+    color: rgba(245, 238, 224, 0.85);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #061923;
+    color: #f5eee0;
+    text-align: center;
+    padding: 55px 20px;
+    scroll-margin-top: 90px;
+}
+
+footer h3 {
+    color: #e5b84b;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: rgba(245, 238, 224, 0.7);
+}
+
+.footer-line {
+    width: 50px;
+    height: 1px;
+    background: #e5b84b;
+    margin: 25px auto;
+}
+
+.copyright {
+    font-size: 10px;
+}
+
+/* Contact anchor offset */
+#contact {
+    scroll-margin-top: 90px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+    header {
+        padding: 12px 3%;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 17px;
+        gap: 8px;
+    }
+
+    .logo .cross {
+        font-size: 26px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a,
+    .language-switch button {
+        font-size: 12px;
+    }
+
+    .ministries-section,
+    .serve-section {
+        padding: 70px 5%;
+    }
+
+    .ministry-container,
+    .serve-container {
+        gap: 16px;
+    }
+
+    .ministry-card {
+        padding: 30px 18px;
+    }
+
+    .serve-card {
+        padding: 28px 22px;
+    }
+}
+
+/* =========================================
+   MOBILE AND TABLET
+========================================= */
+
+@media (max-width: 800px) {
+    html {
+        scroll-padding-top: 160px;
+    }
+
+    body {
+        padding-top: 0;
+    }
+
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+        white-space: normal;
+        text-align: center;
+        font-size: 19px;
+    }
+
+    nav {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+        white-space: normal;
+    }
+
+    .language-switch {
+        width: 100%;
+        justify-content: center;
+        margin-top: 2px;
+    }
+
+    .ministries-hero {
+        min-height: 55vh;
+        padding: 55px 25px;
+        margin-top: 0;
+    }
+
+    .ministries-hero h1 {
+        font-size: clamp(34px, 6vw, 44px);
+    }
+
+    .ministries-hero .subtitle {
+        font-size: 17px;
+    }
+
+    .ministries-hero .intro {
+        font-size: 15px;
+    }
+
+    .ministries-section,
+    .serve-section {
+        padding: 60px 20px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .ministry-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .serving-section {
+        grid-template-columns: 1fr;
+    }
+
+    .serving-image {
+        min-height: 400px;
+    }
+
+    .serving-text {
+        padding: 60px 25px;
+    }
+
+    .serving-text h2 {
+        font-size: 34px;
+    }
+
+    .serve-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .verse {
+        padding: 55px 20px;
+    }
+
+    .welcome-section {
+        min-height: 350px;
+        padding: 55px 20px;
+    }
+
+    footer {
+        padding: 45px 20px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE PHONES
+========================================= */
+
+@media (max-width: 480px) {
+    html {
+        scroll-padding-top: 180px;
+    }
+
+    header {
+        padding: 10px 8px;
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 17px;
+        gap: 7px;
+    }
+
+    .logo .cross {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 8px 12px;
+    }
+
+    nav a,
+    .language-switch button {
+        font-size: 12px;
+    }
+
+    .ministries-hero {
+        min-height: 55vh;
+        padding: 45px 18px;
+    }
+
+    .ministries-hero .small-title {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .ministries-hero h1 {
+        font-size: 32px;
+        line-height: 1.25;
+    }
+
+    .ministries-hero .subtitle {
+        font-size: 16px;
+    }
+
+    .ministries-hero .intro {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .ministries-section,
+    .serve-section {
+        padding: 45px 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+    }
+
+    .ministry-container,
+    .serve-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .ministry-card {
+        padding: 28px 22px;
+    }
+
+    .ministry-card h3 {
+        font-size: 22px;
+    }
+
+    .serving-image {
+        min-height: 320px;
+    }
+
+    .image-overlay h2 {
+        font-size: 32px;
+    }
+
+    .serving-text {
+        padding: 45px 22px;
+    }
+
+    .serving-text h2 {
+        font-size: 32px;
+    }
+
+    .serve-card {
+        padding: 28px 24px;
+    }
+
+    .verse p {
+        font-size: 22px;
+    }
+
+    .welcome-section {
+        min-height: 320px;
+        padding: 45px 18px;
+    }
+
+    .welcome-content h2 {
+        font-size: 36px;
+    }
+
+    footer {
+        padding: 35px 18px;
+    }
+
+    footer h3 {
+        font-size: 22px;
+    }
+}
